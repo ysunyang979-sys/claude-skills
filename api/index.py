@@ -25,6 +25,6 @@ class handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         self.send_response(200)
-        self.send_header('Content-type', 'text/plain')
+        self.send_header('Content-type', 'text/html; charset=utf-8')
         self.end_headers()
-        self.wfile.write("API is online. Please use POST to trigger skills.".encode())
+        self.wfile.write("<h1>API 运行中</h1><p>请使用 POST 请求触发技能</p>".encode())
